@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+<title>JavaScript Project</title>
+<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+
+<body>
+
+  <div id="nav">
+    <ul>
+      <li>
+      <a href = "myJavaScript.js"
+      </li>
+    </ul>
+  </div>
+<div class="main" onclick="myTest()">I am loving this </div>
+<h1 class="main">This is a Heading</h1>
+<p class="main">This is a paragraph.</p>
+
+<button type="button" onclick="myFunc()">Try</button>
+
+
+<p id="demo"> will this work? </p>
+<p id="demo2"> will this work again? </p>
+/*--------------------------------------------------------------*/
+<script>
+    function isLeapYear(year) {
+  return new Date(year, 1, 29).getDate() === 29
+}
+document.write(isLeapYear(2019));// false
+document.write(isLeapYear(2020)) // true
+</script>
+
+//--------------------------------------------------
+
+<p id="demo3"></p>
+<p>This is the lowest min number <span id="demo4"></span></p>
+
+<script>
+// Create an Array:
+const car1 = {type:"Fiat", model:"500", color:"white"};
+const car2 = {type:"Ford", model:"Mustang GT", color:"white"};
+const car3 = {type:"Dodge", model:"Challenger", color:"black"};
+
+var theCars = [car1, car2, car3];
+document.getElementById("demo3").innerHTML = theCars.type; 
+console.log(theCars);
+</script>
+/*------------
+------------------------*/
+
+<h2>JavaScript Functions</h2>
+
+<p>This example calls a function to convert from Fahrenheit to Celsius:</p>
+<p id="demo"></p>
+
+<script>
+function toCelsius(f) {
+  return (5/9) * (f-32);
+}
+document.getElementById("demo").innerHTML = toCelsius(77);
+</script>
+//------------------------------------------
+<script>
+var nums=[-1, 3.2, 12, 15, -4, 1, -12.5, 1, 8];
+
+function findMin(arr) {
+    return lowNum = Math.min.apply(null, arr);
+}
+document.getElementById("demo4").innerHTML = lowNum;
+</script>
+//-----------------------------------------------------
+<script>
+    document.getElementById("demo2").innerHTML = "Hello Dolly.";
+</script>
+
+<script type="text/javascript" src="js/main.js"></script>
+
+<h2>JavaScript Template Literals</h2>
+
+<p>Template literals allows variables in strings:</p>
+
+<p id="demo"></p>
+
+<p>Template literals are not supported in Internet Explorer.</p>
+
+<script>
+let header = "Templates Literals";
+let tags = ["template literals", "javascript", "es6"];
+
+let html = `<h2>${header}</h2><ul>`;
+
+for (const x of tags) {
+  html += `<li>${x}</li>`;
+}
+
+html += `</ul>`;
+document.getElementById("demo").innerHTML = html;
+
+var sample = {
+id: 137, 
+people: [
+	{firstname:"Lisa", lastName: "Witfoth"},
+    {firstname:"Noel", lastName: "Cruz"},
+    {firstname:"Courtney", lastName: "Henshaw"}
+]
+};
+let teamC = `<h2>Team Coding Super Stars</h2><ul>`;
+for (const tm of sample.people){
+teamC += `<li>${tm.firstname} ${tm.lastName} </li>`;
+}
+teamC += `</ul>`;
+document.getElementById("demo").innerHTML = teamC;
+</script>
+<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
